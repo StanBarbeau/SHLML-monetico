@@ -1,0 +1,22 @@
+{% extends 'MoneticoBundle::base.html.twig' %}
+
+{% block title %}Phase BackKo{%endblock%}
+
+{% block base_body %}
+
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-4 well">
+		
+			<center>
+				<div class="row alert alert-danger" role="alert">
+					<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> La transaction de paiement à échoué!
+				
+				</div>
+				<div class="row">
+					<a class="btn btn-default" href="{{ path('monetico_homepage') }}">Retour au site</a>
+				</div>
+			</center>
+			
+		</div>
+	</div>
+{% endblock %}

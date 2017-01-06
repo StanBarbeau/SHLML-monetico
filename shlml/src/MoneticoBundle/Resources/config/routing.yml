@@ -1,0 +1,18 @@
+monetico_homepage:
+    path:     /
+    defaults: { _controller: MoneticoBundle:Default:index }
+
+monetico_go:
+    path: /go
+    defaults:
+        _controller: MoneticoBundle:Default:go
+
+monetico_ok:
+    path: /ok
+    defaults:
+        _controller: MoneticoBundle:Default:backOk
+        
+monetico_ko:
+    path: /ko
+    defaults:
+        _controller: MoneticoBundle:Default:backKo

@@ -1,0 +1,4 @@
+services:
+ #   monetico.default_controller:
+#        class: MoneticoBundle\Controller\DefaultController
+#        arguments: ['%monetico.params%']

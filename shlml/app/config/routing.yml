@@ -1,0 +1,7 @@
+monetico:
+    resource: "@MoneticoBundle/Resources/config/routing.yml"
+    prefix:   /monetico/
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

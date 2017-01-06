@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-sm-12">
+		
+		<table class="table table-bordered">
+			<tr>
+				<th>Article</th>
+				<th>Quantité</th>
+				<th>Prix unitaire</th>
+				<th>Prix total</th>
+			</tr>
+			
+			{% for p in pannier.produits %}
+			<tr>
+				<td><img src="{{asset(p.image, 'produit')}}" alt="{{p.article}}"/></td>
+				<td>{{p.quantitee}}</td>
+				<td>{{p.prixU}}</td>
+				<td>{{p.prixT}}</td>
+			</tr>
+			{% endfor %}
+			
+		</table>
+		
+		<center><div class="alert alert-info" role="info">
+			Prix total : {{pannier.prixT}} 
+			{% if sDevise == 'EUR' %}<span class="glyphicon glyphicon-euro"></span>
+			{% else %}<span class="glyphicon glyphicon-dollar"></span>
+			{% endif %}
+		</div></center>
+	</div>
+</div>

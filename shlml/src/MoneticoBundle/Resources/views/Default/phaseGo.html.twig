@@ -1,0 +1,43 @@
+{% extends 'MoneticoBundle::base.html.twig' %}
+
+{% block title %}Phase Go{%endblock%}
+
+{% block base_body %}
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 well">
+			
+				{% include 'recapCommande.html.twig' %}
+				
+				<form action="{{urlPayment}}" method="post" id="PaymentRequest">
+<p>
+	<input type="hidden" name="version"             id="version"        value="{{sVersion}}" />
+	<input type="hidden" name="TPE"                 id="TPE"            value="{{sNumero}}" />
+	<input type="hidden" name="date"                id="date"           value="{{sDate}}" />
+	<input type="hidden" name="montant"             id="montant"        value="{{sMontant ~ sDevise}}" />
+	<input type="hidden" name="reference"           id="reference"      value="{{sReference}}" />
+	<input type="hidden" name="MAC"                 id="MAC"            value="{{sMac}}" />
+	<input type="hidden" name="url_retour"          id="url_retour"     value="{{sUrlKO}}" />
+	<input type="hidden" name="url_retour_ok"       id="url_retour_ok"  value="{{sUrlOK}}" />
+	<input type="hidden" name="url_retour_err"      id="url_retour_err" value="{{sUrlKO}}" />
+	<input type="hidden" name="lgue"                id="lgue"           value="{{sLangue}}" />
+	<input type="hidden" name="societe"             id="societe"        value="{{sCodeSociete}}" />
+	<input type="hidden" name="texte-libre"         id="texte-libre"    value="{{sTexteLibre}}" />
+	<input type="hidden" name="mail"                id="mail"           value="{{sEmail}}" />
+	
+	<center><input class="btn btn-default" type="submit" name="bouton"              id="bouton"         value="Continuer vers Monetico" /></center>
+</p>
+</form>		
+			
+			</div>
+		</div>
+
+{% endblock %}
+
+{% block metas %}
+	{{ parent() }}
+	<meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate, post-check=0, pre-check=0" />
+	<meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+{% endblock %}
+

@@ -1,0 +1,13 @@
+parameters:
+    monetico.params:
+        monetico.key: 8444fd524f1337e46a26cb8fba828afb4931da4d
+        monetico.eptnumber: 6202253
+        monetico.version: "3.0"
+        monetico.urlserver: https://p.monetico-services.com/test/
+        monetico.companycode: shlml
+        monetico.urlpayment: paiement.cgi
+        monetico.locale: FR
+        monetico.devise: EUR
+        monetico.email: shlml.contact@gmail.com
+        monetico.id: 5UBD4ESHLML 
+        monetico.pwd: Shlml1848
